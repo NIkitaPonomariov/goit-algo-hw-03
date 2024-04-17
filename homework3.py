@@ -1,5 +1,5 @@
 from datetime import datetime
-from random import randint
+import random
 
 #перевірочка функція
 
@@ -28,7 +28,7 @@ def get_numbers_ticket(min, max, quantity):
     try:
         if min >=1 and max <= 1000 and min < quantity < max and min<max:
             for i in range(quantity):
-                x.append(randint(min,max))
+                x.append(random.sample(range(min, max+1), quantity))
             x.sort()
             return x
         else:
