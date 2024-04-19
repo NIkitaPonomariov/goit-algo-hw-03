@@ -26,7 +26,7 @@ test(get_days_from_today('2024-04-16'),2)
 def get_numbers_ticket(min, max, quantity):
     x = None
     try:
-        if min >= 1 and max <= 1000 and min <= quantity <= max and min < max: #додав правильні перевірки
+        if min >= 1 and max <= 1000 and min <= quantity <= (max-min+1) and min < max: #додав правильні перевірки
             x = random.sample(range(min, max+1), quantity)     # тут забрав цикл, розібрався з новою для себе функцією
             x.sort()
             return x
